@@ -1,0 +1,10 @@
+version: "3.8"
+services: 
+    scrapy:
+        container_name: scrapy
+        # build: .
+        image: nitaydockerhub/scrapy:0.1
+        volumes: 
+            - ./:/app/
+        working_dir: /app/crawlimages
+        command: ["scrapy","crawl","images"]
